@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Demo</title>
+	<style>
+	#content{
+		margin : 200px auto;
+		height : 300px;
+		width : 300px;
+		font-size: 22px;
+		line-height: 300px;
+		text-align: center;
+		border : 3px solid #000;
+		border-radius: 50px;
+		background: -webkit-linear-gradient(top, #fff 0%, #f00 50%, #000 100%);
+		box-shadow: 0px 0px 5px 5px blue, 0px 0px 0px 10px green;
+		-webkit-transition : -webkit-transform 0.5s ease-in-out, font-size 0s linear 0.5s ;
+	}
+
+	#content:hover{
+		font-size: 32px;
+		-webkit-transform : rotate(90deg) ;
+	}
+	#menu{
+		list-style : none;
+		border : 1px solid black;
+	}
+
+	#menu>li{
+		display : inline;
+		margin: 5px 10px;
+	}
+
+	ul.submenu{
+		list-style: none;
+	}
+	ul.submenu li.menuItem{
+		display : block;
+		margin:10px;
+		border : 1px solid black;
+	}
+	h1{
+		text-align: center;
+		font-size: 38px;
+		text-shadow : 1px 1px 3px red;
+
+	}
+	#txtName:focus{
+		box-shadow: 0px 0px 4px 1px red;
+	}
+	#txtName{
+		-webkit-transition:box-shadow 1s;
+	}
+	</style>
+</head>
+<body>
+<input type="" name="" id="txtName">
+<h1>AMDOCS</h1>
+	<!-- <ul id="menu">
+		<li>
+			<span>Menu-1</span>
+			<ul class="submenu">
+				<li class="menuItem">Sub-menu-1</li>
+				<li class="menuItem">Sub-menu-2</li>
+				<li class="menuItem">Sub-menu-3</li>
+				<li class="menuItem">Sub-menu-4</li>
+				<li class="menuItem">Sub-menu-5</li>
+			</ul>
+		</li>
+		<li>Menu-2</li>
+		<li>Menu-3</li>
+		<li>Menu-4</li>
+		<li>Menu-5</li>
+	</ul> -->
+	<div id="content">Amdocs</div>
+</body>
+</html>

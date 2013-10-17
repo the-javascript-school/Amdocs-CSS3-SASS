@@ -1,0 +1,54 @@
+$grid-width : 960px;
+$column-count : 12;
+$gutter-width : 20px;
+$column-width : ($grid-width / $column-count) - $gutter-width;
+
+@mixin grid-system($grid-width : 960px,$column-count : 12,$gutter-width : 10px){
+
+	body {
+	  min-width: $grid-width;
+	}
+
+	$column-width : ($grid-width / $column-count) - $gutter-width;
+
+	.container_#{$column-count}
+	{
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: $grid-width;
+	}
+
+	.gridBase{
+		  display: inline;
+		  float: left;
+		  margin-left: $gutter-width / 2;
+		  margin-right: $gutter-width / 2;
+
+	}
+	@for $i from 1 through 12 {
+		.grid_#{$i} {
+			@extend .gridBase;
+		}
+	}
+
+	@for $i from 1 through 4 {
+		.container_#{$column-count} .grid_#{$i * 3},
+		{
+		  $total-column-width : $column-width*($i*3);
+		   $gutter-to-add : ($i*3)*$gutter-width - $gutter-width;
+		  width: $total-column-width + $gutter-to-add;
+
+		  //(()+);
+		}
+	}
+
+	@for $i from 1 to 12 {
+		.container_#{$column-count} .grid_#{$i} {
+			$total-column-width : $column-width*$i;
+			$gutter-to-add : ($i*$gutter-width) - $gutter-width;
+	  		width: $total-column-width + $gutter-to-add;
+		}
+	}
+}
+
+@include grid-system(960px, 16, 10px);

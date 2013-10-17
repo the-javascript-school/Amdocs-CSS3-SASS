@@ -1,0 +1,39 @@
+@import "constants";
+@import "reset";
+
+@function box-background-light($color){
+	@return lighten($color,40%);
+}
+
+@mixin css3Style($style-name,$style-value){
+	#{$style-name} : -webkit-#{$style-value};
+	#{$style-name} : -moz-#{$style-value};
+	#{$style-name} : -ms-#{$style-value};
+	#{$style-name} : -o-#{$style-value};
+	#{$style-name} : #{$style-value};
+}
+
+@mixin box-border($color : gray){
+	@extend .box;
+	border-color : $color;
+	$top-color : box-background-light($color);
+	$bottom-color : $color;
+	@include css3Style('background','linear-gradient(top, #{$top-color} 0%, #{$bottom-color} 100%)');
+}
+.box{
+	padding : 5px 10px;
+	margin : 0 auto 25px;
+	border-radius : 5px;
+	border : 2px solid;
+	em{
+		text-decoration : underline;
+	}
+	@include box-border();
+}
+.important{
+	@include box-border($green-color);
+}
+.error{
+	$red-color : #f00 !default;
+	@include box-border($red-color);
+}

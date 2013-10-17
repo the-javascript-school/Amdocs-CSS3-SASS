@@ -1,0 +1,32 @@
+body{
+	padding : 30px;
+}
+
+div{
+	margin-bottom : 10px;
+}
+.thirdDiv {
+	margin-left : 40px;
+	> span{
+		color : red;
+	}
+}
+
+h3{
+	margin-bottom : 10px;
+	a{
+		color : blue;
+		&:hover{
+			color : green;
+		}
+	}
+	#two & a{
+		color : orange;
+	}	
+}
+
+a{
+	color : red;
+	text-decoration : none;
+}
+

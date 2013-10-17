@@ -1,0 +1,75 @@
+<link href="file" rel="stylesheet" media="logic media and (expression)">
+@import url('file') logic media and (expression);
+@media logic media and (expression) { rules }
+
+@media only media and (expression) { rules }
+@media not media and (expression) { rules }
+
+Width and Height
+@media media and (width:600px) { rules }
+@media media and (max-width:480px) { rules }
+@media media and (min-width:640px) { rules }
+
+Demo
+
+Height
+@media media and (height:value) { rules }
+@media media and (max-height:value) { rules }
+@media media and (min-height:value) { rules }
+
+Orientation 
+Demo
+===========================================================================
+Selectors
+E[attr] {} /* Simple Attribute Selector */
+E[attr='value'] {} /* Exact Attribute Value Selector */
+E[attr~='value'] {} /* Partial Attribute Value Selector
+E[attr|='value'] {} /* Language Attribute Selector */
+
+beginning - E[attr^='value'] {}
+Demo - 03-css3-selector-1
+
+substring - E[attr$='value'] {}
+Demo - 04-css3-selector-substring-attribute
+
+arbitrary substring - E[attr*='value'] {}
+Demo - 05-css3-selector*
+
+the general sibling combinator
+E + F {} /* Adjacent Sibling Combinator */
+E ~ F {} /* General Sibling Combinator */
+
+====================================================================
+pseudo classes and elements
+E:first-child {}
+E:nth-*(n) {}
+E:nth-*(2n) {}
+E:nth-*(3n) {}
+
+E:nth-*(n+1) {}
+E:nth-*(2n+1) {}
+E:nth-*(3n-1) {}
+
+E:nth-*(even) {}
+E:nth-*(odd) {}
+
+nth-child and nth-of-type
+
+E:nth-child(n) {}
+E:nth-of-type(n) {}
+E:nth-child(2n) {}
+E:nth-of-type(2n) {}
+
+Demo - table
+=================================================
+multi columns
+column-width
+column-count
+column-gap
+column-rule
+	column-rule-width
+	column-rule-style
+	column-rule-color
+	
+
+

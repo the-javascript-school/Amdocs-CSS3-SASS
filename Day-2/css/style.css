@@ -1,0 +1,23 @@
+body {
+  padding: 30px; }
+
+div {
+  margin-bottom: 10px; }
+
+.thirdDiv {
+  margin-left: 40px; }
+  .thirdDiv > span {
+    color: red; }
+
+h3 {
+  margin-bottom: 10px; }
+  h3 a {
+    color: blue; }
+    h3 a:hover {
+      color: green; }
+  #two h3 a {
+    color: orange; }
+
+a {
+  color: red;
+  text-decoration: none; }
